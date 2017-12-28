@@ -1,0 +1,26 @@
+{
+  "name": "high-net-worth",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dream10005/high-net-worth.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dream10005/high-net-worth/issues"
+  },
+  "engines": {
+    "node": "^4.2.0"
+  },
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "hapi": "^13.0.0",
+    "request": "^2.69.0"
+  }
+}
