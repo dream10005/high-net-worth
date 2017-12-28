@@ -22,14 +22,15 @@ server.route({
     request(agoda, (err, response, body) => {
 
       if (!err && response.statusCode === 200) {
-
+      	let q = [];
         let $ = cheerio.load(body);
-        //var n = body.search("HotelDisplayName");
+        var s = body.match(/HotelDisplayName/g);
+        var n = body.search("HotelDisplayName");
 
         //let title = $('.price_color').text().trim();
         //let name = $('._3GxXy').text().trim();
         //let hh	=	$('._1GuxN.DE9rG._2V6Hh.Dk2Ei').text().trim();
-        let x = $('.step2-hotel-name').html();
+        let x = $('.step2-hotel-name').text();
         // let title = $('.document-title').text().trim();
         // let publisher = $('.document-subtitle.primary').text().trim();
         // let category = $('.document-subtitle.category').text().trim();
@@ -51,7 +52,8 @@ server.route({
         reply({
         	// data: name,
         	// name: hh,
-        	xx: body
+        	n: s.length,
+        	q: x
         });
 
       } else {
