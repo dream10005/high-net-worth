@@ -24,8 +24,8 @@ server.route({
       if (!err && response.statusCode === 200) {
       	let q = [];
         let $ = cheerio.load(body);
-        var s = body.match(/HotelDisplayName/g);
-        var n = body.search("HotelDisplayName");
+        //var s = body.match(/HotelDisplayName/);
+        //var n = body.search("HotelDisplayName");
 
         //let title = $('.price_color').text().trim();
         //let name = $('._3GxXy').text().trim();
@@ -52,7 +52,7 @@ server.route({
         reply({
         	// data: name,
         	// name: hh,
-        	n: s.length,
+        	n: body,
         	q: x
         });
 
